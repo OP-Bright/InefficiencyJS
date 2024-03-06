@@ -61,6 +61,23 @@
           }
         };
       },
+      /**
+       * Calculates the distance between two points.
+       * @param {Object} pointA - the first point
+       * @param {number} pointA.x - the x value of point A
+       * @param {number} pointA.y - the y value of point A
+       * @param {Object} pointB - the second point
+       * @param {number} pointB.x - the x value of point A
+       * @param {number} pointB.y - the y value of point A
+       * @returns 
+       */
+      calculateDistance: function(pointA, pointB) {
+        const distanceX = pointB.x - pointA.x
+        const distanceY = pointB.y - pointA.y
+        const distance = Math.sqrt((distanceX * distanceX) + (distanceY * distanceY))
+        return distance;
+      }
     },
   };
 }(window, window._));
+
