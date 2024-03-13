@@ -69,7 +69,7 @@
        * @param {Object} pointB - the second point
        * @param {number} pointB.x - the x value of point A
        * @param {number} pointB.y - the y value of point A
-       * @returns 
+       * @returns {number}
        */
       calculateDistance: function(pointA, pointB) {
         const distanceX = pointB.x - pointA.x
