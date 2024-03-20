@@ -2,7 +2,34 @@
 
 (function(window, _) {
   window.inefficiencyJS = window.inefficiencyJS || {
-    numz: {/* other code */},
+    numz: {
+      /**
+       * @param {Object} pointA: An object, should have an x and y key.
+       * @param {Object} pointB: An object, should have an x and y key.
+       * @returns {Number} Angle in degrees between point A and point B.
+       */
+      getAngleDegrees: function (pointA, pointB) {
+        const distanceX = pointB.x - pointA.x;
+        const distanceY = pointB.y - pointA.y;
+        const radians = Math.atan2(distanceY, distanceX);
+        const degrees = radians * 180 / Math.PI;
+        return degrees;
+      },
+      /**
+      * @param {Number} degrees: A number in degrees.
+      * @returns {Number} the number you provided, converted to Radians.
+      */
+      degreesToRadians: function (degrees) {
+        return degrees * Math.PI / 180;
+      },
+      /**
+      * @param {Number} radians: A number in radians.
+      * @returns {Number} the number you provided, converted to Degrees.
+      */
+      radiansToDegrees: function (radians) {
+        return radians * 180 / Math.PI
+      },
+    },
     phyz: {
       /**
        * Returns an Object with basic properties utilized in a 
@@ -69,7 +96,7 @@
        * @param {Object} pointB - the second point
        * @param {number} pointB.x - the x value of point A
        * @param {number} pointB.y - the y value of point A
-       * @returns {number}
+       * @returns {number} the distance between the two points.
        */
       calculateDistance: function(pointA, pointB) {
         const distanceX = pointB.x - pointA.x
