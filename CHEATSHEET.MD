@@ -14,6 +14,8 @@ To release your library to `bower` initially:
 
 To re-release your library to `bower`:
 
+To determine your most recent tag/version number, run the following command: `git tag -l`
+
 1. Save your changes to the `index.js` file.
 2. Open up the `bower.json` file, and increment the version number, from `0.1.0` to `0.2.0` (or from its previous version to the next version). Save the file.
 3. `git add -A`
