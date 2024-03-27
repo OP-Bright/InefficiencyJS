@@ -21,7 +21,21 @@ To re-release your library to `bower`:
 5. `git tag -a v0.1.0 -m "<message that describes changes>"`
 6. `git push origin main --tags`.  **DON'T FORGET --tags
 
+<hr>
+
+### Importing *new!*
+
+To add your library to a project (specifically, a project in the video-game course.)
+
+1. `cd video-game-course/<project-name>` goes into game project
+2. `npm install -g bower` installs bower (dude like from mario)
+3. `bower install --save https://github.com/OP-Bright/InefficiencyJS.git` .git is incredibly important.
+4. `cd ../..` This just gets you out of the project for git adding and stuff.
+
+<hr>
+
 References:
 
 * <a href="http://bob.yexley.net/creating-and-maintaining-your-own-bower-package/" target="_blank">Creating & Maintaining Your Own Bower Package</a>
 * <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging" target="_blank">Git Tagging</a>
+* <a>Me for being awesome</a>
